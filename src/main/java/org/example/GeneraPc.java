@@ -67,7 +67,7 @@ public class GeneraPc {
         //Inicializamos componentes de la clase computadora
         pc.iniciarComponentes(cantidadComponentes);
 
-
+        pc.mostrarComponentes();
        //Solicitamos el ingreso de los componentes
         System.out.println("Componentes de la Computadora");
 
@@ -85,6 +85,7 @@ public class GeneraPc {
                 codigosIngresados[contadorComponentes] = codigoComponente.toUpperCase();
                 pc.agregarComponente(componentesPc, codigoComponente.toUpperCase(), contadorComponentes);
                 contadorComponentes++;
+                pc.mostrarComponentes();
             }
 
 

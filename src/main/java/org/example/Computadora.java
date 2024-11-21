@@ -68,7 +68,7 @@ public class Computadora {
     }
 
     public String [][] iniciarComponentes(int cantidad){
-    this.componentes = new String[cantidad][4];
+    this.componentes = new String[cantidad+1][4];
     this.componentes[0][0] = "Codigo Componente";
     this.componentes[0][1] = "Denominacion";
     this.componentes[0][2] = "Precio Componente";
@@ -106,12 +106,12 @@ public class Computadora {
 
     public void agregarComponente(String [][] componentesPc, String codigoComponente, int ubicacion){
 
-        for(int i = 1; i < componentesPc.length; i++){
+        for(int i = 0; i < componentesPc.length; i++){
             if(componentesPc[i][0].equals(codigoComponente)){
-                this.componentes[ubicacion][0] = codigoComponente;
-                this.componentes[ubicacion][1] = componentesPc[i][1];
-                this.componentes[ubicacion][2] = componentesPc[i][2];
-                this.componentes[ubicacion][3] = componentesPc[i][3];
+                this.componentes[ubicacion+1][0] = codigoComponente;
+                this.componentes[ubicacion+1][1] = componentesPc[i][1];
+                this.componentes[ubicacion+1][2] = componentesPc[i][2];
+                this.componentes[ubicacion+1][3] = componentesPc[i][3];
 
             }
         }
